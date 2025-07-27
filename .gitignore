@@ -1,0 +1,49 @@
+# MATLAB backup and autosave files
+*.asv
+*.autosave
+
+# Simulink cache and code generation
+slprj/
+simulink_cache/
+codegen/
+*.mex*
+*.slxc
+*.slxautobackup
+*.mdl.r2012a
+
+# Simulink test results
+*.mldatx
+*.slmdlx
+*.slxc
+*.sldd
+*.sfx
+*.slx.gz
+
+# MATLAB workspace/session files
+*.mat
+*.fig
+*.mlx
+*.mlappinstall
+*.mlpkginstall
+*.mldatx
+*.mexa64
+*.mexw64
+*.mexmaci64
+
+# Logs or temporary output
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+*.swo
+
+# Simulink Project generated files
+*.prj
+*.project
+*.simproj
+*.mproj
+
+# Hidden files/folders
+.DS_Store
+Thumbs.db
