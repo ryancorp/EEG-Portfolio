@@ -20,7 +20,7 @@ EEG-Neuroengineering-Portfolio/
 │
 ├── preprocessing/
 │   ├── bandpass_filter.py                # (0%)     Python:      Digital bandpass (1–50 Hz)
-│   ├── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
+│   └── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
 │
 ├── feature_extraction/
 │   ├── erp_analysis.m                    # (0%)     MATLAB:      ERP (event-related potential) extraction
