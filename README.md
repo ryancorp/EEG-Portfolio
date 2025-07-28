@@ -11,26 +11,26 @@ Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── CircuitDiagram.pdf          # (90%)    PDF:         Schematic of full analog chain
-│   ├── SimscapeModel.slx           # (100%)   Simscape:    Simulated signal path and filter behavior
-│   └── BreadboardDesign.jpg        # (75%)    PDF/KiCad:   Prototyped version; awaiting ADS1115 board
+│   ├── EEG_Circuit.pdf                   # (90%)    PDF:         Schematic of full analog chain
+│   ├── EEG_Characterization_Model.slx    # (100%)   Simscape:    Simulated signal path and filter behavior
+│   └── BreadboardDesign.jpg              # (75%)    PDF/KiCad:   Prototyped version; awaiting ADS1115 board
 │
 ├── data_acquisition/
-│   └── i2c_read_loop.py            # (0%)     Python:      ADC data acquisition over I2C
+│   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
 │
 ├── preprocessing/
-│   ├── bandpass_filter.py          # (0%)     Python:      Digital bandpass (1–50 Hz)
-│   ├── artifact_rejection.py       # (0%)     Python:      Eye blink/motion artifact rejection
+│   ├── bandpass_filter.py                # (0%)     Python:      Digital bandpass (1–50 Hz)
+│   ├── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
 │
 ├── feature_extraction/
-│   ├── erp_analysis.m              # (0%)     MATLAB:      ERP (event-related potential) extraction
-│   └── fft_bandpower.m             # (0%)     MATLAB:      Alpha/Beta bandpower computation
+│   ├── erp_analysis.m                    # (0%)     MATLAB:      ERP (event-related potential) extraction
+│   └── fft_bandpower.m                   # (0%)     MATLAB:      Alpha/Beta bandpower computation
 │
 ├── notebooks/
-│   └── Exploration.ipynb           # (0%)     Jupyter:     Exploratory signal processing and visualizations
+│   └── Exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
 │
 └── writeups/
-    └── EEG_Pipeline_Whitepaper.pdf # (0%)     PDF:         Describing the end-to-end system design
+    └── EEG_Pipeline_Whitepaper.pdf       # (0%)     PDF:         Describing the end-to-end system design
 ```
 ## Sources
 - cah6, "DIY EEG and ECG Circuit," *Instructables*. https://www.instructables.com/DIY-EEG-and-ECG-Circuit/
