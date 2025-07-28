@@ -24,7 +24,7 @@ EEG-Neuroengineering-Portfolio/
 │
 ├── feature_extraction/
 │   ├── erp_analysis.m              # (0%)     MATLAB:      ERP (event-related potential) extraction
-│   ├── fft_bandpower.m             # (0%)     MATLAB:      Alpha/Beta bandpower computation
+│   └── fft_bandpower.m             # (0%)     MATLAB:      Alpha/Beta bandpower computation
 │
 ├── notebooks/
 │   └── Exploration.ipynb           # (0%)     Jupyter:     Exploratory signal processing and visualizations
