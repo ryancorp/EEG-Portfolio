@@ -4,13 +4,13 @@
 This project demonstrates the design and development of an open-source, homebrew EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
 
 ## Motivation
-Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the full EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
+Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
 
 ## Application
-As a proof of concept use case, this device can be used ot study hemispheric differences in brain activity and coherence by comparing singals from the F3 and F4 electrode sites, which has been shown to be affected by Zen meditation, something easily reproducible at home for analysis. By simultaneously connecting these sites to the differenital amplifier it is possible to analyze interhemispheric asymmetry in real time.
+As a proof of concept use case, this device can be used ot study hemispheric differences in brain activity and coherence by comparing signals from the F3 and F4 electrode sites, which have been shown to be affected by Zen meditation [10], something easily reproducible at home for analysis. By simultaneously connecting these sites to the differential amplifier, it is possible to analyze interhemispheric asymmetry in real time.
 
 ## Modes of Operation
-This device has two modes of operation. The first is a dual lead differential setup, with two leads of interest connected to the differential amplifier and a third lead connected to a reference such as A1. The second is a single-channel EGG, in shich one of the differential amplifer leads is also connected to a reference such as A1, and the other to an active site.
+This device has two modes of operation. The first is a dual-lead differential setup, with two leads of interest connected to the differential amplifier and a third lead attached to a reference such as A1. The second is a single-channel EGG, in which one of the differential amplifier leads is also connected to a reference such as A1, and the other to an active site.
 For example:
 	Differential Mode (F3 vs F4): Compares hemispheric activity directly.
 	Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but only from one site at a time.
