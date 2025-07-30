@@ -1,13 +1,10 @@
-# Low-Cost EEG Acquisition & Processing Pipeline
+# Low-Cost Single-Lead EEG Acquisition & Processing Pipeline
 
 ## What This Is
 This project demonstrates the design and development of an open-source, homebrew EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
 
 ## Motivation
 Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
-
-## Application
-As a proof of concept use case, this device can be used ot study hemispheric differences in brain activity and coherence by comparing signals from the F3 and F4 electrode sites, which have been shown to be affected by Zen meditation [10], something easily reproducible at home for analysis. By simultaneously connecting these sites to the differential amplifier, it is possible to analyze interhemispheric asymmetry in real time.
 
 ## Modes of Operation
 This device has two modes of operation. The first is a dual-lead differential setup, with two leads of interest connected to the differential amplifier and a third lead attached to a reference such as A1. The second is a single-channel EGG, in which one of the differential amplifier leads is also connected to a reference such as A1, and the other to an active site.
@@ -20,9 +17,9 @@ For example:
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── EEG_Circuit.pdf                   # (90%)    PDF:         Schematic of full analog chain
+│   ├── EEG_Circuit.pdf                   # (100%)   PDF:         Schematic of full analog chain
 │   ├── EEG_Characterization_Model.slx    # (100%)   Simscape:    Simulated signal path and filter behavior
-│   └── BreadboardDesign.jpg              # (75%)    PDF/KiCad:   Prototyped version; awaiting ADS1115 board
+│   └── BreadboardDesign.jpg              # (75%)    PDF/KiCad:   Prototype version; awaiting ADS1115 board
 │
 ├── data_acquisition/
 │   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
@@ -51,4 +48,3 @@ EEG-Neuroengineering-Portfolio/
 [7]“Summing Amplifier is an Op-amp Voltage Adder,” Basic Electronics Tutorials, Feb. 2019. https://www.electronics-tutorials.ws/opamp/opamp_4.html (accessed Jul. 29, 2025).
 [8]R. Rager, “Tools of the Trade,” Jan. 2022. Accessed: Jul. 29, 2025. [Online]. Available: https://aset.org/wp-content/uploads/2022/01/10-20_System_Demonstration.pdf
 [9]J. Acharya, A. Hani, P. Thirumala, and T. Tsuchida, “American Clinical Neurophysiology Society Guideline 3: A Proposal for Standard Montages to Be Used in Clinical EEG,” American Clinical Neurophysiology Society, 2016. Accessed: Jul. 29, 2025. [Online]. Available: https://www.acns.org/UserFiles/file/EEGGuideline3Montage.pdf
-[10]Pradeep Kumar G, K. Sharma, A Adarsh, Amrutha Manvi, G Ramajayam, and A. G. Ramakrishnan, “Coherence-based interhemispheric EEG functional connectivity changes in distinct frequency bands during eyes open meditation,” bioRxiv (Cold Spring Harbor Laboratory), Feb. 2023, doi: https://doi.org/10.1101/2023.02.06.527252.
