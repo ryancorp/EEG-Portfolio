@@ -1,10 +1,19 @@
 # Low-Cost EEG Acquisition & Processing Pipeline
 
 ## What This Is
-This project demonstrates the design and development of a low-cost, open-source EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
+This project demonstrates the design and development of an open-source, homebrew EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
 
 ## Motivation
-Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the full EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning applications.
+Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the full EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
+
+#Application
+As a proof of concept use case, this device can be used ot study hemispheric differences in brain activity and coherence by comparing singals from the F3 and F4 electrode sites, which has been shown to be affected by Zen meditation, something easily reproducible at home for analysis. By simultaneously connecting these sites to the differenital amplifier it is possible to analyze interhemispheric asymmetry in real time.
+
+#Modes of Operation
+This device has two modes of operation. The first is a dual lead differential setup, with two leads of interest connected to the differential amplifier and a third lead connected to a reference such as A1. The second is a single-channel EGG, in shich one of the differential amplifer leads is also connected to a reference such as A1, and the other to an active site.
+For example:
+	Differential Mode (F3 vs F4): Compares hemispheric activity directly.
+	Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but only from one site at a time.
 
 ## File System Plan and Completion
 ```plaintext
@@ -33,6 +42,13 @@ EEG-Neuroengineering-Portfolio/
     └── EEG_Pipeline_Whitepaper.pdf       # (0%)     PDF:         Describing the end-to-end system design
 ```
 ## Sources
-- cah6, "DIY EEG and ECG Circuit," *Instructables*. https://www.instructables.com/DIY-EEG-and-ECG-Circuit/
-- C. Epstein, "Homebrew Do-It-Yourself EEG, EKG and EMG," *Google Sites*. https://sites.google.com/site/chipstein/homebrew-do-it-yourself-eeg-ekg-and-emg?authuser=0
-- M. Ricker, "DIY EEG Headset," *MIT Media Lab, 2015*. https://fab.cba.mit.edu/classes/863.15/section.Harvard/people/Ricker/htm/Final_Project.html
+[1]C. Epstein, “chipstein - Homebrew Do-it-yourself EEG, EKG, and EMG.” https://sites.google.com/site/chipstein/homebrew-do-it-yourself-eeg-ekg-and-emg/ (accessed Jul. 30, 2025).
+[2]cah6, “DIY EEG (and ECG) Circuit,” Instructables. https://www.instructables.com/DIY-EEG-and-ECG-Circuit/ (accessed Jul. 29, 2025).
+[3]E. Ricker, “Elizabeth Ricker,” fab.cba.mit.edu, 2015. https://fab.cba.mit.edu/classes/863.15/section.Harvard/people/Ricker/htm/Final_Project.html (accessed Jul. 29, 2025).
+[4]A. Marblestone, “Adam Marblestone,” Mit.edu, 2025. https://fab.cba.mit.edu/classes/863.12/people/Adam.Marblestone/AHM_week05.html (accessed Jul. 30, 2025).
+[5]C. Moyes and M. Jiang, “Brain-Computer Interface Using Single-Channel Electroencephalography,” people.ece.cornell.edu, 2012. https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2012/cwm55/cwm55_mj294/index.html (accessed Jul. 29, 2025).
+[6]A. Ortiz and J. Minguz, “Main features of the EEG amplifier explained,” Bitbrain, Apr. 03, 2020. https://www.bitbrain.com/blog/eeg-amplifier (accessed Jul. 29, 2025).
+[7]“Summing Amplifier is an Op-amp Voltage Adder,” Basic Electronics Tutorials, Feb. 2019. https://www.electronics-tutorials.ws/opamp/opamp_4.html (accessed Jul. 29, 2025).
+[8]R. Rager, “Tools of the Trade,” Jan. 2022. Accessed: Jul. 29, 2025. [Online]. Available: https://aset.org/wp-content/uploads/2022/01/10-20_System_Demonstration.pdf
+[9]J. Acharya, A. Hani, P. Thirumala, and T. Tsuchida, “American Clinical Neurophysiology Society Guideline 3: A Proposal for Standard Montages to Be Used in Clinical EEG,” American Clinical Neurophysiology Society, 2016. Accessed: Jul. 29, 2025. [Online]. Available: https://www.acns.org/UserFiles/file/EEGGuideline3Montage.pdf
+[10]Pradeep Kumar G, K. Sharma, A Adarsh, Amrutha Manvi, G Ramajayam, and A. G. Ramakrishnan, “Coherence-based interhemispheric EEG functional connectivity changes in distinct frequency bands during eyes open meditation,” bioRxiv (Cold Spring Harbor Laboratory), Feb. 2023, doi: https://doi.org/10.1101/2023.02.06.527252.
