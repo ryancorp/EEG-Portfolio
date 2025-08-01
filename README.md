@@ -16,7 +16,7 @@ EEG-Neuroengineering-Portfolio/
 ├── hardware/
 │   ├── EEG_Circuit.pdf                   # (100%)   PDF:         Schematic of full analog chain
 │   ├── EEG_Characterization_Model.slx    # (100%)   Simscape:    Simulated signal path and filter behavior
-│   └── breadboard_design.jpg              # (75%)    PDF/KiCad:   Prototype version; awaiting ADS1115 board
+│   └── breadboard_design.jpg             # (75%)    PDF/KiCad:   Prototype version; awaiting ADS1115 board
 │
 ├── data_acquisition/
 │   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
