@@ -16,24 +16,27 @@ EEG-Neuroengineering-Portfolio/
 ├── hardware/
 │   ├── EEG_Circuit.pdf                   # (100%)   PDF:         Schematic of full analog chain
 │   ├── EEG_Characterization_Model.slx    # (100%)   Simscape:    Simulated signal path and filter behavior
-│   └── BreadboardDesign.jpg              # (75%)    PDF/KiCad:   Prototype version; awaiting ADS1115 board
+│   └── breadboard_design.jpg              # (75%)    PDF/KiCad:   Prototype version; awaiting ADS1115 board
 │
 ├── data_acquisition/
 │   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
 │
 ├── preprocessing/
 │   ├── bandpass_filter.py                # (0%)     Python:      Digital bandpass (1–50 Hz)
-│   └── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
+│   ├── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
+│   └── simscape_output_testing/
+│   	├── simscape_output.csv           # (100%)   CSV:         Voltage over time data from Simscape
+│   	└── simscape_output_processing.py # (100%)   Python:      Testing filters for eventual implementation on RPi Zero
 │
 ├── feature_extraction/
 │   ├── erp_analysis.m                    # (0%)     MATLAB:      ERP (event-related potential) extraction
 │   └── fft_bandpower.m                   # (0%)     MATLAB:      Alpha/Beta bandpower computation
 │
 ├── notebooks/
-│   └── Exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
+│   └── exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
 │
 └── writeups/
-    └── EEG_Pipeline_Whitepaper.pdf       # (0%)     PDF:         Describing the end-to-end system design
+    └── EEG_pipeline_whitepaper.pdf       # (0%)     PDF:         Describing the end-to-end system design
 ```
 ## Sources
 [1]C. Epstein, “chipstein - Homebrew Do-it-yourself EEG, EKG, and EMG.” https://sites.google.com/site/chipstein/homebrew-do-it-yourself-eeg-ekg-and-emg/ (accessed Jul. 30, 2025).
