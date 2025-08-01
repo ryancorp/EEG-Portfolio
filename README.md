@@ -1,16 +1,13 @@
 # Low-Cost Single-Lead EEG Acquisition & Processing Pipeline
 
 ## What This Is
-This project demonstrates the design and development of an open-source, homebrew EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
+This project demonstrates the design and development of an open-source, homebrew single-lead EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
 
 ## Motivation
 Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
 
 ## Modes of Operation
-This device has two modes of operation. The first is a dual-lead differential setup, with two leads of interest connected to the differential amplifier and a third lead attached to a reference such as A1. The second is a single-channel EGG, in which one of the differential amplifier leads is also connected to a reference such as A1, and the other to an active site.
-For example:
-	Differential Mode (F3 vs F4): Compares hemispheric activity directly.
-	Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but only from one site at a time.
+Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but only from one site at a time.
 
 ## File System Plan and Completion
 ```plaintext
