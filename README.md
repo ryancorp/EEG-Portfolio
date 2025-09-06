@@ -16,7 +16,7 @@ EEG-Neuroengineering-Portfolio/
 ├── hardware/
 │   ├── EEG_Circuit.pdf                   # (100%)   PDF/KiCad:   Schematic of full analog chain
 │   ├── EEG_Characterization_Model.slx    # (N/A)    Simscape:    Simulated signal path and filter behavior (Outdated Circuit Design)
-│   └── breadboard_design.jpg             # (100%)    JPEG:        Prototype version; awaiting ADS1115 board
+│   └── breadboard_design.jpg             # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
 │
 ├── data_acquisition/
 │   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
@@ -29,8 +29,8 @@ EEG-Neuroengineering-Portfolio/
 │   	└── simscape_output_processing.py # (100%)   Python:      Testing filters for eventual implementation on RPi Zero
 │
 ├── feature_extraction/
-│   ├── erp_analysis.m                    # (0%)     MATLAB:      ERP (event-related potential) extraction
-│   └── fft_bandpower.m                   # (0%)     MATLAB:      Alpha/Beta bandpower computation
+│   ├── erp_analysis.m                    # (0%)     Python:      ERP (event-related potential) extraction
+│   └── fft_bandpower.m                   # (0%)     Python:      Alpha/Beta bandpower computation
 │
 ├── notebooks/
 │   └── exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
