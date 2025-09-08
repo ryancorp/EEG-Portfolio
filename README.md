@@ -15,18 +15,14 @@ EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
 │   ├── EEG_Circuit.pdf                   # (100%)   PDF/KiCad:   Schematic of full analog chain
-│   ├── EEG_Characterization_Model.slx    # (N/A)    Simscape:    Simulated signal path and filter behavior (Outdated Circuit Design)
+│   ├── EEG_Characterization_Model.slx    # (100%)*  Simscape:    Simulated signal path and filter behavior *(Outdated Circuit Design)
 │   └── breadboard_design.jpg             # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
 │
-├── data_acquisition/
-│   └── i2c_read_loop.py                  # (0%)     Python:      ADC data acquisition over I2C
-│
-├── preprocessing/
-│   ├── bandpass_filter.py                # (0%)     Python:      Digital bandpass (1–50 Hz)
-│   ├── artifact_rejection.py             # (0%)     Python:      Eye blink/motion artifact rejection
-│   └── simscape_output_testing/
-│   	├── simscape_output.csv           # (100%)   CSV:         Voltage over time data from Simscape
-│   	└── simscape_output_processing.py # (100%)   Python:      Testing filters for eventual implementation on RPi Zero
+├── data_acquisition and preprocessing/
+│   ├── i2c_read_loop.py                  # (90%)     Python:      ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
+│   └──simscape_output_testing/
+│   	├── simscape_output.csv           # (100%)*  CSV:         Voltage over time data from Simscape *(Outdated Circuit Design)
+│   	└── simscape_output_processing.py # (100%)   Python:      Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
 │
 ├── feature_extraction/
 │   ├── erp_analysis.m                    # (0%)     Python:      ERP (event-related potential) extraction
