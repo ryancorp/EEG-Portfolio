@@ -14,19 +14,19 @@ Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but onl
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── EEG_Circuit.pdf                   # (100%)   PDF/KiCad:   Schematic of full analog chain
-│   ├── EEG_Characterization_Model.slx    # (100%)*  Simscape:    Simulated signal path and filter behavior *(Outdated Circuit Design)
-│   └── breadboard_design.jpg             # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
+│   ├── EEG_Circuit.pdf                       # (100%)   PDF/KiCad:   Schematic of full analog chain
+│   ├── EEG_Characterization_Model.slx        # (100%)*  Simscape:    Simulated signal path and filter behavior *(Outdated Circuit Design)
+│   └── breadboard_design.jpg                 # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
 │
 ├── data_acquisition/
-│   ├── i2c_read_loop.py                  # (90%)     Python:      ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
+│   ├── i2c_read_loop_and_preprocessing.py    # (90%)     Python:      ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
 │   └──simscape_output_testing/
-│   	├── simscape_output.csv           # (100%)*  CSV:         Voltage over time data from Simscape *(Outdated Circuit Design)
-│   	└── simscape_output_processing.py # (100%)   Python:      Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
+│   	├── simscape_output.csv               # (100%)*  CSV:         Voltage over time data from Simscape *(Outdated Circuit Design)
+│   	└── simscape_output_processing.py     # (100%)   Python:      Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
 │
 ├── feature_extraction/
-│   ├── erp_analysis.m                    # (0%)     Python:      ERP (event-related potential) extraction
-│   └── fft_bandpower.m                   # (0%)     Python:      Alpha/Beta bandpower computation
+│   ├── erp_analysis.m                        # (0%)     Python:      ERP (event-related potential) extraction
+│   └── fft_bandpower.m                       # (0%)     Python:      Alpha/Beta bandpower computation
 │
 ├── notebooks/
 │   └── exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
