@@ -18,7 +18,7 @@ EEG-Neuroengineering-Portfolio/
 │   ├── EEG_Characterization_Model.slx    # (100%)*  Simscape:    Simulated signal path and filter behavior *(Outdated Circuit Design)
 │   └── breadboard_design.jpg             # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
 │
-├── data_acquisition_and_preprocessing/
+├── data_acquisition/
 │   ├── i2c_read_loop.py                  # (90%)     Python:      ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
 │   └──simscape_output_testing/
 │   	├── simscape_output.csv           # (100%)*  CSV:         Voltage over time data from Simscape *(Outdated Circuit Design)
