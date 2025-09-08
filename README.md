@@ -1,13 +1,14 @@
 # Low-Cost Single-Lead EEG Acquisition & Processing Pipeline
 
 ## What This Is
-This project demonstrates the design and development of an open-source, homebrew single-lead EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing using Python and MATLAB.
+This project demonstrates the design and development of an open-source, homebrew single-lead EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing, chunking, serialization, I2C, and analysis in Python.
 
 ## Motivation
-Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow—from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 2-lead EEG system suitable for future machine learning and neuroscience applications.
+Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow, from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 1- to 2-lead EEG system suitable for future machine learning and neuroscience applications.
 
 ## Modes of Operation
 Single-Lead Mode (e.g., F3 vs A1): Allows localized activity measurement but only from one site at a time.
+Differential Mode: Allows for differential comparison between two active EEG leads.
 
 ## File System Plan and Completion
 ```plaintext
@@ -28,11 +29,8 @@ EEG-Neuroengineering-Portfolio/
 │   ├── erp_analysis.m                        # (0%)     Python:      ERP (event-related potential) extraction
 │   └── fft_bandpower.m                       # (0%)     Python:      Alpha/Beta bandpower computation
 │
-├── notebooks/
-│   └── exploration.ipynb                 # (0%)     Jupyter:     Exploratory signal processing and visualizations
-│
 └── writeups/
-    └── EEG_pipeline_whitepaper.pdf       # (0%)     PDF:         Describing the end-to-end system design
+    └── EEG_pipeline_whitepaper.pdf           # (0%)     PDF:         Describing the end-to-end system design along with showcased visualizations
 ```
 ## Sources
 [1] C. Epstein, “chipstein - Homebrew Do-it-yourself EEG, EKG, and EMG.” https://sites.google.com/site/chipstein/homebrew-do-it-yourself-eeg-ekg-and-emg/ (accessed Jul. 30, 2025).
