@@ -8,6 +8,7 @@ import numpy as np
 from threading import Thread, Lock
 import serial
 import struct
+from collection import deque
 
 SAMPLE_RATE_HZ = 860 #SPS
 SAMPLE_INTERVAL = 1.0 / SAMPLE_RATE_HZ
@@ -18,11 +19,8 @@ SLIDING_BUFFER_SIZE = SLIDING_BUFFER_SECONDS * SAMPLE_RATE_HZ
 CHUNK_DURATION_SECONDS = 1 #Amount of data sent per step size
 CHUNK_SIZE = int(SAMPLE_RATE_HZ * CHUNK_DURATION_SECONDS)
 
-PAD_DURATION_SECONDS = 0.25 #Seconds to Pad around Chunk Sent
+PAD_DURATION_SECONDS = 0.25 #Seconds to pad around data (adds a delay to data received)
 PAD_SIZE = int(SAMPLE_RATE_HZ * PAD_DURATION_SECONDS)
-
-STEP_DURATION_SECONDS = 0.1 #How often samples are sent
-STEP_SIZE = int(SAMPLE_RATE_HZ * STEP_DURATION_SECONDS)
 
 i2c = busio.I2C(board.SCL, board.SDA)
 
@@ -69,23 +67,31 @@ def serialize_chunk_binary(chunk):
 # Worker thread to filter and send chunks
 def process_and_send():
     global active_buffer
-    chunk_index = 0
+    prev_pad = None
+    
     while True:
         lock.acquire()
         buffer_to_process = active_buffer.copy()
         lock.release()
         
-        if len(buffer_to_process) >= (CHUNK_SIZE + 2 * PAD_SIZE):
-            full_buffer = np.array(buffer_to_process)
-            filtered = bandpass_filter(full_buffer, 1, 50, SAMPLE_RATE_HZ)
+        #Chunk and padding logic to avoid bandpass edge artifacts
+        try:
+            raw_chunk = buffer_to_process[-(CHUNK_SIZE + PAD_SIZE):]
+            if prev_pad is not None:
+                chunk_with_pad = np.concatenate([prev_pad, raw_chunk])
+            elif len(buffer_to_process) >= (CHUNK_SIZE + 2 * PAD_SIZE):
+                chunk_with_pad = np.array(buffer_to_process)
+            filtered = bandpass_filter(chunk_with_pad, 1, 50, SAMPLE_RATE_HZ)
             clean = interpolate_artifacts(filtered)
-            
-            latest_chunk = clean[-(CHUNK_SIZE + PAD_SIZE):-PAD_SIZE]
+            latest_chunk = clean[PAD_SIZE:-PAD_SIZE]
+            prev_pad = raw_chunk[-PAD_SIZE:]
             ser.write(serialize_chunk_binary(latest_chunk))
-            chunk_index += 1
-        time.sleep(STEP_DURATION_SECONDS)  # throttle processing
+        finally:
+            continue
+        time.sleep(CHUNK_DURATION_SECONDS)  # throttle processing
 
 # Start worker thread
+active_buffer = deque(maxlen=SLIDING_BUFFER_SIZE)
 thread = Thread(target=process_and_send, daemon=True)
 thread.start()
 
