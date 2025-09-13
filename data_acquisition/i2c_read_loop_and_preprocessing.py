@@ -8,23 +8,23 @@ import numpy as np
 from threading import Thread, Lock
 import serial
 import struct
-from collection import deque
+from collections import deque
 
 SAMPLE_RATE_HZ = 860 #SPS
-SAMPLE_INTERVAL = 1.0 / SAMPLE_RATE_HZ
+SAMPLE_INTERVAL = 1.0 / SAMPLE_RATE_HZ #Seconds per sample
 
 SLIDING_BUFFER_SECONDS = 5
 SLIDING_BUFFER_SIZE = SLIDING_BUFFER_SECONDS * SAMPLE_RATE_HZ
 
-CHUNK_DURATION_SECONDS = 1 #Amount of data sent per step size
+CHUNK_DURATION_SECONDS = 0.15 #Amount of data sent per step size
 CHUNK_SIZE = int(SAMPLE_RATE_HZ * CHUNK_DURATION_SECONDS)
 
-PAD_DURATION_SECONDS = 0.25 #Seconds to pad around data (adds a delay to data received)
+PAD_DURATION_SECONDS = 0.05 #Seconds to pad around data (adds a delay to data received)
 PAD_SIZE = int(SAMPLE_RATE_HZ * PAD_DURATION_SECONDS)
 
 i2c = busio.I2C(board.SCL, board.SDA)
 
-ser = serial.Serial('/dev/ttyUSB0', 115200)
+ser = serial.Serial('/dev/serial0', 115200)
 
 lock = Lock()
 
