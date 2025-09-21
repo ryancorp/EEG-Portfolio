@@ -15,23 +15,25 @@ Differential Mode: Allows for differential comparison between two active EEG lea
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── EEG_Circuit.pdf                       # (90%)   PDF/KiCad:    Schematic of full analog chain (Need to be revised, real-world circuit not working as expected)
-│   ├── EEG_Characterization_Model.slx        # (100%)*  Simscape:    Simulated signal path and filter behavior *(Based on outdated circuit design)
-│   └── breadboard_design.jpg                 # (90%)    JPEG:        Prototype version; Need to change summing amplifier design
+│   ├── EEG_Circuit.pdf                       # (90%)    PDF/KiCad:   Schematic of full analog chain (Need to be revised, real-world circuit not working as expected)
+│   ├── EEG_LTspice Simulation/
+│   │	├── EEG.asc                           # (100%)   LTspice:     Simulated signal path and filter behavior
+│   │	└── *Supporting .raw and .lib         # (100%)   LTspice:     Required files for LTspice Simulation, including AD620
+│   └── breadboard_design.jpg                 # (90%)    JPEG:        Prototype version; need to update to latest circuit design
 │
 ├── data_acquisition/
 │   ├── i2c_read_loop_and_preprocessing.py    # (90%)     Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
 │   ├── serial_reader_for_windows.py          # (90%)     Python:     Receives and graphs data sent over serial from the microcontroller. (Current has no feature extraction or memory)
 │   └──simscape_output_testing/
-│   	├── simscape_output.csv               # (100%)*  CSV:         Voltage over time data from Simscape *(Outdated Circuit Design)
-│   	└── simscape_output_processing.py     # (100%)   Python:      Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
+│   	├── simscape_output.csv               # (100%)*   CSV:        Voltage over time data from Simscape *(Outdated Simulation From Previous Iteration [Replaced with LTSpice])
+│   	└── simscape_output_processing.py     # (100%)    Python:     Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
 │
 ├── feature_extraction/
-│   ├── erp_analysis.py                        # (0%)     Python:      ERP (event-related potential) extraction
-│   └── fft_bandpower.py                       # (0%)     Python:      Alpha/Beta bandpower computation
+│   ├── erp_analysis.py                        # (0%)     Python:     ERP (event-related potential) extraction
+│   └── fft_bandpower.py                       # (0%)     Python:     Alpha/Beta bandpower computation
 │
 └── writeups/
-    └── EEG_pipeline_whitepaper.pdf           # (0%)     PDF:         Describing the end-to-end system design along with showcased visualizations
+    └── EEG_pipeline_whitepaper.pdf           # (0%)      PDF:        Describing the end-to-end system design along with showcased visualizations
 ```
 ## Sources
 [1] C. Epstein, “chipstein - Homebrew Do-it-yourself EEG, EKG, and EMG.” https://sites.google.com/site/chipstein/homebrew-do-it-yourself-eeg-ekg-and-emg/ (accessed Jul. 30, 2025).
