@@ -1,7 +1,7 @@
 # Low-Cost Single-Lead EEG Acquisition & Processing Pipeline
 
 ## What This Is
-This project demonstrates the design and development of an open-source, homebrew single-lead EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (Simscape), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing, chunking, serialization, I2C, and analysis in Python.
+This project demonstrates the design and development of an open-source, homebrew single-lead EEG acquisition and preprocessing system. It spans circuit-level prototyping, simulation (LTspice), digital signal acquisition via an ADS1115 ADC and Raspberry Pi Zero V1.3, and software preprocessing, chunking, serialization, I2C, and analysis in Python.
 
 ## Motivation
 Driven by my interest in brain–computer interfaces (BCIs) and brain-controlled robotics/prosthetics, I set out to replicate the complete EEG feature extraction workflow, from electrode input to feature vector output. The goal is to build a simplified, modular, and affordable 1- to 2-lead EEG system suitable for future machine learning and neuroscience applications.
