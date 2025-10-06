@@ -2,6 +2,8 @@
 import serial
 import struct
 import time
+import csv
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import serial.tools.list_ports
@@ -17,7 +19,16 @@ CHUNK_SIZE = int(SAMPLE_RATE_HZ * CHUNK_DURATION_SECONDS)
 
 CIRCUIT_GAIN = 1164.44 #Circuit gain
 
+CSV_FILE = "eeg_data.csv"
+
 GRAPH_BOUNDS = SAMPLE_RANGE/(2*CIRCUIT_GAIN) # Expected voltage range
+
+# Check if the file exists, then delete it
+if os.path.exists(CSV_FILE):
+    os.remove(CSV_FILE)
+    print(f"{CSV_FILE} has been deleted.")
+else:
+    print(f"{CSV_FILE} does not exist.")
 
 # Setup real-time plot
 plt.ion()
@@ -56,6 +67,7 @@ signal_data = []
 
 t_chunk = np.linspace(0, CHUNK_DURATION_SECONDS, CHUNK_SIZE, endpoint=False)
 
+# Finds serial ports to improve device compatability... Better hope you don't have anything else connected...
 def find_serial_port(retries=5, delay=2):
     keywords = ['raspberry', 'usb serial', 'usbmodem', 'ttyusb', 'ch340', 'cp210', 'ftdi']
 
@@ -81,7 +93,7 @@ def find_serial_port(retries=5, delay=2):
 
     raise RuntimeError("Could not detect Raspberry Pi serial connection.")
     
-
+# Read chunk sent over serial
 def read_chunk(ser, chunk_size):
     num_bytes = chunk_size * 4  # 4 bytes per float
     data = b''
@@ -93,7 +105,17 @@ def read_chunk(ser, chunk_size):
     #print(f"Chunk {chunk_index} received: {chunk}")
     return np.array(chunk)/CIRCUIT_GAIN
 
-# --- MAIN ---
+# Appends chunk to created CSV. This CSV will be overwritten on startup so move somewhere else if you would like to save it
+def append_chunk_to_csv(time_array, signal_array, filename=CSV_FILE):
+    file_exists = os.path.exists(filename)
+    
+    with open(filename, mode='a', newline='') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["time", "signal"])  # write header only if file is new
+        for t, s in zip(time_array, signal_array):
+            writer.writerow([t, s])
+
 if __name__ == "__main__":
     try:
         port = find_serial_port()
@@ -130,6 +152,8 @@ if __name__ == "__main__":
         
             # Current chunk
             line_chunk.set_data(t_chunk, chunk)
+            
+            append_chunk_to_csv(t_shifted, chunk)
         
             fig.canvas.flush_events()
             plt.pause(0.001)  # force update
