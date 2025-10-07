@@ -51,8 +51,6 @@ EEG-Neuroengineering-Portfolio/
 
 [8] R. Rager, “Tools of the Trade,” Jan. 2022. Accessed: Jul. 29, 2025. [Online]. Available: https://aset.org/wp-content/uploads/2022/01/10-20_System_Demonstration.pdf
 
-[9] J. Acharya, A. Hani, P. Thirumala, and T. Tsuchida, “American Clinical Neurophysiology Society Guideline 3: A Proposal for Standard Montages to Be Used in Clinical EEG,” American Clinical Neurophysiology Society, 2016. Accessed: Jul. 29, 2025. [Online]. Available: https://www.acns.org/UserFiles/file/EEGGuideline3Montage.pdf
-
 [10] “Connect to a Raspberry Pi Zero W via USB - No Mini HDMI Cable Needed,” www.youtube.com. https://www.youtube.com/watch?v=xj3MPmJhAPU (accessed May 09, 2024).
 
 [11]  Mahmoodmustafashilleh, “How to Use ADS1115 With the Raspberry Pi (Part 1),” Instructables, May 27, 2024. https://www.instructables.com/How-to-Use-ADS1115-With-the-Raspberry-Pi-Part-1/
