@@ -13,14 +13,11 @@ EEG-Neuroengineering-Portfolio/
 │   ├── EEG_LTspice Simulation/
 │   │	├── EEG.asc                           # (100%)    LTspice:    Simulated signal path and filter behavior
 │   │	└── *Supporting .raw and .lib         # (100%)    LTspice:    Required files for LTspice Simulation, including AD620
-│   └── breadboard_design.jpg                 # (100%)    JPEG:       Prototype version; need to update to latest circuit design
+│   └── Breadboard.jpg                        # (100%)    JPEG:       Image of the final circuit
 │
 ├── data_acquisition/
 │   ├── i2c_read_loop_and_preprocessing.py    # (100%)    Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
-│   ├── serial_reader_for_windows.py          # (100%)    Python:     Receives and graphs data sent over serial from the microcontroller. (Current has no feature extraction or memory)
-│   └──simscape_output_testing/
-│   	├── simscape_output.csv               # (100%)*   CSV:        Voltage over time data from Simscape *(Outdated Simulation From Previous Iteration [Replaced with LTSpice])
-│   	└── simscape_output_processing.py     # (100%)    Python:     Testing digital bandpass (1–50 Hz), eye blink/motion artifact rejection, and chunking.
+│   └── serial_reader_for_windows.py          # (100%)    Python:     Receives and graphs data sent over serial from the microcontroller. (Current has no feature extraction or memory)
 │
 ├── feature_extraction/
 │   └── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Bandpower computation and Hjorth parameters visualizer
