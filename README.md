@@ -23,7 +23,7 @@ EEG-Neuroengineering-Portfolio/
 │   └── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
 │
 └── writeups/
-    └── Whitepaper.pdf                        # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
+    └── Whitepaper.pdf                        # (90%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations (Need to add images of the signals received and edit the paper)
 ```
 ## Sources
 [1] “Biosensing Starter Bundle,” OpenBCI Shop, 2015. [Online]. Available: https://shop.openbci.com/products/biosensing-starter-bundle?srsltid=AfmBOooZW34DXjRMADrFQMKMT046x-OEp9Lo4T9CD59FJCSn6VKfGpQm (accessed Oct. 07, 2025).
