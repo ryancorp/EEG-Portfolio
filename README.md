@@ -9,21 +9,21 @@ The field of brain-computer interfaces presents significant learning opportuniti
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── EEG_Circuit.pdf                       # (100%)    PDF/KiCad:  Schematic of full analog chain
+│   ├── EEG_Circuit.pdf                       # (100%)    PDF/KiCad:  Schematic of full analog circuit
 │   ├── EEG_LTspice Simulation/
-│   │	├── EEG.asc                           # (100%)    LTspice:    Simulated signal path and filter behavior
-│   │	└── *Supporting .raw and .lib         # (100%)    LTspice:    Required files for LTspice Simulation, including AD620
+│   │	├── EEG.asc                           # (100%)    LTspice:    Simulated analog circuit and filter behavior
+│   │	└── *Supporting .raw and .lib         # (100%)    LTspice:    Required files for LTspice Simulation, including AD620 module
 │   └── Breadboard.jpg                        # (100%)    JPEG:       Image of the final circuit
 │
 ├── data_acquisition/
 │   ├── i2c_read_loop_and_preprocessing.py    # (100%)    Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
-│   └── serial_reader_for_windows.py          # (100%)    Python:     Receives and graphs data sent over serial from the microcontroller. (Current has no feature extraction or memory)
+│   └── serial_reader_for_windows.py          # (100%)    Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
 │
 ├── feature_extraction/
-│   └── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Bandpower computation and Hjorth parameters visualizer
+│   └── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
 │
 └── writeups/
-    └── EEG_pipeline_whitepaper.pdf           # (100%)    PDF:        Describing the end-to-end system design along with showcased visualizations
+    └── Whitepaper.pdf                        # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
 ```
 ## Sources
 [1] “Biosensing Starter Bundle,” OpenBCI Shop, 2015. [Online]. Available: https://shop.openbci.com/products/biosensing-starter-bundle?srsltid=AfmBOooZW34DXjRMADrFQMKMT046x-OEp9Lo4T9CD59FJCSn6VKfGpQm (accessed Oct. 07, 2025).
