@@ -17,13 +17,15 @@ EEG-Neuroengineering-Portfolio/
 │
 ├── data_acquisition/
 │   ├── i2c_read_loop_and_preprocessing.py    # (100%)    Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
-│   └── serial_reader_for_windows.py          # (100%)    Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
+│   ├── serial_reader_for_windows.py          # (100%)    Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
+│   └── Waveform.png                          # (100%)    PNG:        Screenshot of waveform visualizer with live data
 │
 ├── feature_extraction/
-│   └── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
+│   ├── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
+│   └── Feature_Extraction.png                # (100%)    PNG:        Screenshot of Hjorth parameter and FFT visualizer with live data
 │
 └── writeups/
-    └── Whitepaper.pdf                        # (90%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations (Need to add images of the signals received and edit the paper)
+    └── Whitepaper.pdf                        # (90%)     PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations (Need to add images of the signals received and edit the paper)
 ```
 ## Sources
 [1] “Biosensing Starter Bundle,” OpenBCI Shop, 2015. [Online]. Available: https://shop.openbci.com/products/biosensing-starter-bundle?srsltid=AfmBOooZW34DXjRMADrFQMKMT046x-OEp9Lo4T9CD59FJCSn6VKfGpQm (accessed Oct. 07, 2025).
