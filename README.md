@@ -24,7 +24,7 @@ EEG-Neuroengineering-Portfolio/
 │   └── Feature_Extraction.png                # (100%)    PNG:        Screenshot of Hjorth parameter and FFT visualizer with live data
 │
 └── whitepaper/
-    └── A Low-Cost Modular EEG System.pdf     # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations (Need to add images of the signals received and edit the paper)
+    └── A Low-Cost Modular EEG System.pdf     # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
 ```
 ## Sources
 [1] “Biosensing Starter Bundle,” OpenBCI, 2015. https://shop.openbci.com/products/biosensing-starter-bundle?srsltid=AfmBOooZW34DXjRMADrFQMKMT046x-OEp9Lo4T9CD59FJCSn6VKfGpQm (accessed Oct. 07, 2025).
