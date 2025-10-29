@@ -11,7 +11,7 @@ EEG-Neuroengineering-Portfolio/
 │   ├── EEG_Circuit.pdf                       # (100%)    PDF/KiCad:  Schematic of full analog circuit
 │   ├── EEG_LTspice Simulation/
 │   │	├── EEG.asc                           # (100%)    LTspice:    Simulated analog circuit and filter behavior
-│   │	└── *Supporting .raw and .lib         # (100%)    LTspice:    Required files for LTspice Simulation, including AD620 module
+│   │	└── Supporting .raw and .lib files    # (100%)    LTspice:    Required files for LTspice Simulation, including AD620 module
 │   └── Breadboard.jpg                        # (100%)    JPEG:       Image of the final circuit
 │
 ├── data_acquisition/
@@ -23,7 +23,7 @@ EEG-Neuroengineering-Portfolio/
 │   ├── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
 │   └── Feature_Extraction.png                # (100%)    PNG:        Screenshot of Hjorth parameter and FFT visualizer with live data
 │
-└── whitepaper/
+└── technical_report/
     └── A Low-Cost Modular EEG System.pdf     # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
 ```
 ## Sources
