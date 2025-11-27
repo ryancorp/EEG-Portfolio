@@ -8,23 +8,23 @@ Brain-computer interfaces (BCIs) offer a wealth of educational value and researc
 EEG-Neuroengineering-Portfolio/
 │
 ├── hardware/
-│   ├── EEG_Circuit.pdf                       # (100%)    PDF/KiCad:  Schematic of full analog circuit
+│   ├── EEG_Circuit.pdf                                 # (100%)    PDF/KiCad:  Schematic of full analog circuit
 │   ├── EEG_LTspice Simulation/
-│   │	├── EEG.asc                           # (100%)    LTspice:    Simulated analog circuit and filter behavior
-│   │	└── Supporting .raw and .lib files    # (100%)    LTspice:    Required files for LTspice Simulation, including AD620 module
-│   └── Breadboard.jpg                        # (100%)    JPEG:       Image of the final circuit
+│   │	├── EEG.asc                                     # (100%)    LTspice:    Simulated analog circuit and filter behavior
+│   │	└── Supporting .raw and .lib files              # (100%)    LTspice:    Required files for LTspice Simulation, including AD620 module
+│   └── Breadboard.jpg                                  # (100%)    JPEG:       Image of the final circuit
 │
 ├── data_acquisition/
-│   ├── i2c_read_loop_and_preprocessing.py    # (100%)    Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
-│   ├── serial_reader_for_windows.py          # (100%)    Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
-│   └── Waveform.png                          # (100%)    PNG:        Screenshot of waveform visualizer with live data
+│   ├── i2c_read_loop_and_preprocessing.py              # (100%)    Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
+│   ├── serial_reader_for_windows.py                    # (100%)    Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
+│   └── Waveform.png                                    # (100%)    PNG:        Screenshot of waveform visualizer with live data
 │
 ├── feature_extraction/
-│   ├── hjorth_params_and_fft_viewer.py       # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
-│   └── Feature_Extraction.png                # (100%)    PNG:        Screenshot of Hjorth parameter and FFT visualizer with live data
+│   ├── hjorth_params_and_fft_viewer.py                 # (100%)    Python:     Real-time bandpower computation and Hjorth parameters visualizer
+│   └── Feature_Extraction.png                          # (100%)    PNG:        Screenshot of Hjorth parameter and FFT visualizer with live data
 │
 └── technical_report/
-    └── A Low-Cost Modular EEG System.pdf     # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
+    └── Low Cost Modular EEG using Raspberry PI.pdf     # (100%)    PDF:        Describes the end-to-end system design, code, and considerations, along with showcased visualizations
 ```
 ## Sources
 [1] “Biosensing Starter Bundle,” OpenBCI, 2015. https://shop.openbci.com/products/biosensing-starter-bundle?srsltid=AfmBOooZW34DXjRMADrFQMKMT046x-OEp9Lo4T9CD59FJCSn6VKfGpQm (accessed Oct. 07, 2025).
