@@ -37,7 +37,7 @@ EEG-Neuroengineering-Portfolio/
 
 [4] E. Ricker, “Final Project: DIY EEG, EEG: Cheap and Small,” fab.cba.mit.edu, Dec. 2015. https://fab.cba.mit.edu/classes/863.15/section.Harvard/people/Ricker/htm/Final_Project.html (accessed Jul. 29, 2025).
 
-[5] Marblestone and Fracchia, “FabECG: a simple electrocardiogram board,” fab.cba.mit.edu. https://fab.cba.mit.edu/classes/863.12/people/Adam.Marblestone/AHM_week05.html (accessed 7AD).
+[5] Marblestone and Fracchia, “FabECG: a simple electrocardiogram board,” fab.cba.mit.edu. https://fab.cba.mit.edu/classes/863.12/people/Adam.Marblestone/AHM_week05.html (accessed Jul. 28, 2025).
 
 [6] C. Moyes and M. Jiang, “Brain-Computer Interface Using Single-Channel Electroencephalography,” people.ece.cornell.edu, 2012. https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2012/cwm55/cwm55_mj294/index.html (accessed Jul. 30, 2025).
 
