@@ -18,7 +18,7 @@ EEG-Neuroengineering-Portfolio/
 │
 ├── data_acquisition/
 │   ├── i2c_read_loop_and_preprocessing.py                          Python:     ADC data acquisition over I2C with chunking digital bandpass (1–50 Hz) and eye blink/motion artifact rejection
-│   ├── serial_reader_for_windows.py                                Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
+│   ├── eeg_reader.py                                               Python:     Receives data sent over serial from the microcontroller and visualizes the EEG signal
 │   └── Waveform.png                                                PNG:        Screenshot of waveform visualizer with live data
 │
 ├── feature_extraction/
