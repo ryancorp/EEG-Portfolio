@@ -50,7 +50,7 @@ def read_latest_samples_tail(filename, seconds=TAIL_SECONDS):
     except Exception:
         return np.array([]), np.array([])
 
-# Computes Hjorth Params in microvolts^2 for Activity
+# Computes Hjorth Params for Activity
 def hjorth_parameters(signal):
     signal = signal * (10**6) #Convert uV signal to V
     
